@@ -6,7 +6,7 @@ public class SalesManager {
     }
 
     public long max() {
-        int max = -1;
+        long max = -1;
         for (long sale : sales) {
             if (sale > max) {
                 max = sale;
@@ -15,9 +15,9 @@ public class SalesManager {
         return max;
     }
 
-    public int min() {
-        int min = 0;
-        for (int sale : sales) {
+    public long min() {
+        long min = 0;
+        for (long sale : sales) {
             if (sale < min) {
                 min = sale;
             }
@@ -27,8 +27,8 @@ public class SalesManager {
 
     //Способ получения среднего значения
     public double avgExcludingMinMax() {
-        int max = sales[0];
-        int min = sales[0];
+        long max = sales[0];
+        long min = sales[0];
         long sum = 0;
         for (int i = 0; i < sales.length; i++) {
             sum = sum + sales[i];
